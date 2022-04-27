@@ -1,22 +1,23 @@
-=== Divídelo para Woocommerce ===
+=== Divídelo para WooCommerce ===
 Contributors: renzotejada
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: divídelo, interbank, coutas, peru
+Tags: dividelo, interbank, cuota, peru
 Requires at least: 5.2
 Tested up to: 5.9.3
-Stable tag: 0.0.2
+Stable tag: trunk
 Requires PHP: 5.6.20
 
-Este plugin de Divídelo agregar el componente de simulación de cuotas para clientes exclusivos de Interbank.
+This Divídelo plugin adds the installment simulation component for Interbank's exclusive clients.
 
-Encontrará esta misma información en el readme.txt del plugin y en nuestro sitio web https://renzotejada.com
+You will find the same information in the plugin's readme.txt and on our website **https://renzotejada.com**.
+
 
 == Description ==
 
-Este plugin de **Divídelo** agregar el componente de simulación de cuotas para clientes exclusivos de Interbank.
+This **Divídelo** plugin adds the installment simulation component for Interbank's exclusive clients.
 
-Encontrará esta misma información en el readme.txt del plugin y en nuestro sitio web **https://renzotejada.com**
+You will find the same information in the plugin's readme.txt and on our website **https://renzotejada.com**.
 
 
 = View more plugins =
@@ -76,6 +77,9 @@ The information was obtained from the following urls:
 
 
 == Changelog ==
+
+= 0.0.3 (27/04/2022) =
+Fix: agregando media para logo y traducciones.
 
 = 0.0.2 (26/04/2022) =
 Fix: cambio de llamado al api.

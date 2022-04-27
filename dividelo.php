@@ -8,8 +8,8 @@
  * @wordpress-plugin
  * Plugin Name:       Divídelo
  * Plugin URI:        https://renzotejada.com/dividelo-para-woocommerce
- * Description:       Descubre Divídelo. Cuotas especiales con tu tarjeta de Interbank
- * Version:           0.0.2
+ * Description:       This Dividelo plugin adds the installment simulation component for Interbank's exclusive clients.
+ * Version:           0.0.3
  * Author:            Renzo Tejada
  * Author URI:        https://renzotejada.com/
  * License:           GNU General Public License v3.0
