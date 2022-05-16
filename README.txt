@@ -1,16 +1,18 @@
 === Divídelo para WooCommerce ===
-Contributors: renzotejada
+Contributors: renzotejada, drplugins
+Tags: divídelo, interbank, cuota, peru
+Requires at least: 5.2
+Tested up to: 6.0
+Stable tag: trunk
+Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: dividelo, interbank, cuota, peru
-Requires at least: 5.2
-Tested up to: 5.9.3
-Stable tag: trunk
-Requires PHP: 5.6.20
 
 This Divídelo plugin adds the installment simulation component for Interbank's exclusive clients.
 
-You will find the same information in the plugin's readme.txt and on our website **https://renzotejada.com**.
+You will find the same information in the plugin's readme.txt and on our website **https://renzotejada.com**(https://renzotejada.com/).
+
+[DEMO](https://test.renzotejada.com/shop/producto/sunglasses/)
 
 
 == Description ==
@@ -77,6 +79,19 @@ The information was obtained from the following urls:
 
 
 == Changelog ==
+
+=  0.0.7 (16/05/2022) =
+Fix: validando versión WC 6.5.1
+Fix: validando versión WP 6.0
+
+= 0.0.6 (27/04/2022) =
+Fix: Add componente a checkout.
+
+= 0.0.5 (27/04/2022) =
+Fix: Add texto al readme.txt
+
+= 0.0.4 (27/04/2022) =
+Fix: seteando la símbolo de monedad correcta.
 
 = 0.0.3 (27/04/2022) =
 Fix: agregando media para logo y traducciones.

@@ -29,7 +29,7 @@ function rt_dividelo_price_html($price_html, $product)
 
                 $simbolo = get_woocommerce_currency_symbol();
                 switch ($simbolo) {
-                    case 'S/.':
+                    case 'S/':
                         $currency = 'PEN';
                         break;
                     default:
@@ -69,3 +69,85 @@ function rt_dividelo_js_dividelo()
 }
 
 add_action('wp_enqueue_scripts', 'rt_dividelo_js_dividelo');
+
+
+function rt_dividelo_content_thankyou( $order_id ) {
+    $url = esc_attr(get_option('dividelo_url'));
+    $user = esc_attr(get_option('dividelo_user_api'));
+    $pass = esc_attr(get_option('dividelo_pass_api'));
+    $base64 = base64_encode($user . ':' . $pass);
+
+    $response = wp_remote_post($url, array(
+            'headers' => array(
+                'Authorization' => 'Basic ' . $base64,
+                'Content-Type' => 'application/x-www-form-urlencoded'
+            ),
+            'body' => 'grant_type=client_credentials&scope=token%3Aapplication',
+        )
+    );
+    $token = (array)json_decode($response['body']);
+
+    $simbolo = get_woocommerce_currency_symbol();
+    switch ($simbolo) {
+        case 'S/':
+            $currency = 'PEN';
+            break;
+        default:
+            $currency = 'USD';
+            break;
+    }
+
+    echo '<br><br>
+                <split-payment-cta use-model="B"
+                  jwt="' . $token['access_token'] . '"
+                  subscription-key="' . esc_attr(get_option('dividelo_subscription_key')) . '"
+                  amount="'.WC()->cart->total. '"
+                  logo-url="' . esc_attr(get_option('dividelo_url_logo')) . '"
+                  currency="' . $currency . '"> 
+                </split-payment-cta>
+            ';
+
+}
+
+add_action( 'after_woocommerce_pay', 'rt_dividelo_content_thankyou', 10, 1 );
+
+function rt_dividelo_review_order(){
+    $url = esc_attr(get_option('dividelo_url'));
+    $user = esc_attr(get_option('dividelo_user_api'));
+    $pass = esc_attr(get_option('dividelo_pass_api'));
+    $base64 = base64_encode($user . ':' . $pass);
+
+    $response = wp_remote_post($url, array(
+            'headers' => array(
+                'Authorization' => 'Basic ' . $base64,
+                'Content-Type' => 'application/x-www-form-urlencoded'
+            ),
+            'body' => 'grant_type=client_credentials&scope=token%3Aapplication',
+        )
+    );
+    $token = (array)json_decode($response['body']);
+
+    $simbolo = get_woocommerce_currency_symbol();
+    switch ($simbolo) {
+        case 'S/':
+            $currency = 'PEN';
+            break;
+        default:
+            $currency = 'USD';
+            break;
+    }
+
+    echo '<br>
+                <split-payment-cta use-model="B"
+                  jwt="' . $token['access_token'] . '"
+                  subscription-key="' . esc_attr(get_option('dividelo_subscription_key')) . '"
+                  amount="'.WC()->cart->total. '"
+                  logo-url="' . esc_attr(get_option('dividelo_url_logo')) . '"
+                  currency="' . $currency . '"> 
+                </split-payment-cta><br>
+            ';
+
+}
+
+add_action( 'woocommerce_review_order_before_submit', 'rt_dividelo_review_order' );
+
