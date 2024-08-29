@@ -10,11 +10,6 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This Divídelo plugin adds the installment simulation component for Interbank's exclusive clients.
 
-You will find the same information in the plugin's readme.txt and on our website **https://renzotejada.com**(https://renzotejada.com/).
-
-[DEMO](https://test.renzotejada.com/shop/producto/sunglasses/)
-
-
 == Description ==
 
 This **Divídelo** plugin adds the installment simulation component for Interbank's exclusive clients.
