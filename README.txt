@@ -1,8 +1,8 @@
 === Divídelo para WooCommerce ===
-Contributors: renzotejada, drplugins
+Contributors: renzotejada, huakotech, alexistejada
 Tags: divídelo, interbank, cuota, peru
 Requires at least: 5.2
-Tested up to: 6.1.1
+Tested up to: 6.6.1
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -80,6 +80,10 @@ The information was obtained from the following urls:
 
 
 == Changelog ==
+
+= 0.9 (28/08/2024) =
+Fix: validando versión WC 9.2.3
+Fix: validando versión WP 6.6.1
 
 = 0.0.8 (06/12/2022) =
 Fix: validando versión WC 7.1.0
