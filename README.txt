@@ -2,9 +2,9 @@
 Contributors: renzotejada, huakotech, alexistejada
 Tags: divídelo, interbank, cuota, peru
 Requires at least: 5.2
-Tested up to: 6.7.1
-Stable tag: 1.1
-Requires PHP: 7.4
+Tested up to: 6.8.1
+Stable tag: 1.2
+Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,7 +76,12 @@ The information was obtained from the following urls:
 
 == Changelog ==
 
-= 1.0 (16/01/2025) =
+= 1.2 (14/06/2025) =
+Fix: validando versión WC 9.9.3
+Fix: validando versión WP 6.8.1
+Fix: agregando sonar con git actions
+
+= 1.1 (16/01/2025) =
 Fix: ignorando archivos
 
 = 1.0 (16/01/2025) =

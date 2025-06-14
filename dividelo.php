@@ -9,7 +9,7 @@
  * Plugin Name:       Divídelo
  * Plugin URI:        https://renzotejada.com/dividelo-para-woocommerce
  * Description:       This Dividelo plugin adds the installment simulation component for Interbank's exclusive clients.
- * Version:           1.1
+ * Version:           1.2
  * Author:            Renzo Tejada
  * Author URI:        https://renzotejada.com/
  * License:           GPL-2.0-or-later
@@ -18,7 +18,7 @@
  * Domain Path:       /language
  * Requires at least: 5.6
  * Requires PHP:      5.6.20
- * WC tested up to:   9.5.2
+ * WC tested up to:   9.9.3
  * WC requires at least: 2.6
  */
 if (!defined('ABSPATH')) {
