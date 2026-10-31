@@ -2,13 +2,13 @@
 Contributors: renzotejada, huakotech, alexistejada
 Tags: divídelo, interbank, cuota, peru
 Requires at least: 5.2
-Tested up to: 6.8.1
-Stable tag: 1.2
-Requires PHP: 8.2
+Tested up to: 7.1.4
+Stable tag: 1.3.0
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This Divídelo plugin adds the installment simulation component for Interbank's exclusive clients.
+Este plugin integra el componente de simulación de cuotas Divídelo de Interbank en páginas de producto y el checkout clásico de WooCommerce. Requiere credenciales y acceso al servicio facilitados por Interbank.
 
 == Description ==
 
@@ -74,7 +74,22 @@ The information was obtained from the following urls:
   a. https://developers-qa.digital.interbank.pe/#/docs/ui/dividelo/?tab=0
 
 
+== Upgrade Notice ==
+
+= 1.3.0 =
+Actualización del panel y manejo de errores de la API. Revisa tus credenciales y prueba el simulador con el servicio de Interbank antes de usarlo en producción. No se eliminan opciones almacenadas.
+
 == Changelog ==
+
+= 1.3.0 (30/10/2026) =
+* Interfaz administrativa renovada con campos adaptables y selección de imagen.
+* Conserva las seis claves de configuración existentes.
+* Ajusta el acceso a las credenciales y valida las respuestas HTTP y JSON.
+* Evita errores al faltar el carrito y reduce la carga del script en páginas no relacionadas.
+* Utiliza las APIs modernas de productos y pedidos de WooCommerce cuando corresponde.
+* No se declara compatibilidad completa con Checkout Blocks, pendiente de integración específica.
+* Compatibilidad objetivo WordPress 7.1.4 y WooCommerce 11.2.1; requiere prueba funcional con la API real.
+
 
 = 1.2 (14/06/2025) =
 Fix: validando versión WC 9.9.3
